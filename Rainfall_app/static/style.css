@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Basic Reset & Font */
+body, h1, h2, h3, p, ul, li, input, select, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Background image and gradient overlay */
+body {
+    background: linear-gradient(rgba(245, 247, 250, 0.93), rgba(245, 247, 250, 0.93)),
+                url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #2c3e50;
+    padding: 30px;
+    animation: fadeInBody 1s ease-in-out;
+}
+
+/* Fade-in effect on body */
+@keyframes fadeInBody {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    animation: slideInContainer 1s ease-in-out;
+}
+
+/* Slide-in animation */
+@keyframes slideInContainer {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1e2a38;
+    font-size: 2.4em;
+    position: relative;
+}
+
+/* Decorative underline */
+h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #00aaff;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+input[type="text"], select {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    min-width: 270px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #00aaff;
+    box-shadow: 0 0 6px rgba(0, 170, 255, 0.3);
+    outline: none;
+}
+
+button {
+    background: #00aaff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 170, 255, 0.2);
+}
+
+button:hover {
+    background: #008ecc;
+    transform: scale(1.05);
+}
+
+.error {
+    color: #e74c3c;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.card {
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInCard 0.6s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #34495e;
+    font-size: 1.1em;
+}
+
+.card p {
+    margin-bottom: 6px;
+    font-size: 15px;
+    color: #555;
+}
+
+/* Card entrance */
+@keyframes fadeInCard {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.plot {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.plot img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+    transition: transform 0.3s;
+}
+
+.plot img:hover {
+    transform: scale(1.02);
+}
+
+.footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    position: relative;
+    animation: fadeInFooter 2s ease-in;
+}
+
+/* Optional pulse for footer icon */
+.footer::before {
+    content: "📡";
+    font-size: 24px;
+    display: block;
+    animation: pulse 2s infinite;
+    margin-bottom: 5px;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInFooter {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.map {
+    height: 450px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin: 30px auto;
+    max-width: 95%;
+}
+.sustainability {
+    margin-top: 50px;
+    padding: 30px;
+    background: rgba(240, 253, 244, 0.9);
+    border-left: 6px solid #34a853;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    animation: fadeInTips 1s ease-in-out;
+}
+
+.sustainability h2 {
+    color: #2e7d32;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tips-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tips-list li {
+    margin-bottom: 14px;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    padding-left: 28px;
+    line-height: 1.5;
+}
+
+.tips-list li::before {
+    content: "🌿";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+}
+
+/* Fade-in animation */
+@keyframes fadeInTips {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

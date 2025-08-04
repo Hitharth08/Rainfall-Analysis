@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Rainfall Checker</title>
+    <style>
+        /* Import a modern font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        /* Reset and base styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+            color: #1e293b;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Container for the form */
+        .container {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        h1 {
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #0f172a;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 6px 0;
+            font-weight: 600;
+            color: #334155;
+            text-align: left;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 2px solid #cbd5e1;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #22c55e;
+            box-shadow: 0 0 6px #22c55eaa;
+        }
+
+        button {
+            margin-top: 25px;
+            background: #22c55e;
+            color: white;
+            font-weight: 600;
+            font-size: 17px;
+            border: none;
+            padding: 14px 0;
+            border-radius: 14px;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: 0 6px 15px rgba(34, 197, 94, 0.4);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background: #16a34a;
+            transform: translateY(-3px);
+        }
+
+        p.res {
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #059669;
+            min-height: 30px;
+            animation: fadeInText 1s ease forwards;
+        }
+
+        a button {
+            background: #3b82f6;
+            margin-top: 20px;
+            box-shadow: 0 6px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        a button:hover {
+            background: #2563eb;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {opacity: 0; transform: translateY(30px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        @keyframes fadeInText {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Check Rainfall for a Single Area</h1>
+
+        <form method="POST">
+            <label for="area">Enter Area:</label>
+            <input type="text" id="area" name="area" required placeholder="e.g., Bangalore" />
+
+            <label for="language">Language:</label>
+            <select id="language" name="language" aria-label="Select language">
+                <option value="en">English</option>
+                <option value="kn">Kannada</option>
+                <option value="hi">Hindi</option>
+            </select>
+
+            <button type="submit">Check Rainfall</button>
+        </form>
+
+        {% if res %}
+            <p class="res"><strong>{{ res }}</strong></p>
+        {% endif %}
+
+        <a href="/"><button type="button">Back to Main Page</button></a>
+    </div>
+</body>
+</html>

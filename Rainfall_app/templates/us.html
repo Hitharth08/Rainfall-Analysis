@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 50px 20px;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        p.description {
+            color: #f0f0f0;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .member {
+    background: white;
+    border-radius: 20px;
+    padding: 30px; /* Increased from 20px */
+    width: 300px;   /* Increased from 250px */
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2); /* Slightly enhanced shadow */
+    animation: slideUp 1s ease-in-out;
+    font-size: 1.1rem; /* Optional: increase text size */
+                }
+
+
+        .member img {
+    width: 100%;
+    max-width: 200px;  /* Or whatever size suits */
+    border-radius: 50%; /* Circular image if desired */
+    margin-bottom: 15px;
+}
+
+
+        .member h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .member p {
+            font-size: 0.95em;
+            color: #555;
+            white-space: pre-line;
+        }
+
+        .ceo-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px 20px;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            animation: slideUp 1s ease-in-out;
+            margin-bottom: 40px;
+        }
+
+        .ceo-section img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .ceo-section h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .ceo-section p {
+            font-size: 1em;
+            color: #555;
+            white-space: pre-line;
+            line-height: 1.4;
+        }
+
+        a button {
+            margin-top: 20px;
+            background-color: #6e8efb;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1em;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        a button:hover {
+            background-color: #5a74d1;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>About Us</h1>
+    <p class="description">Meet our amazing team who contributed to this project with creativity, dedication, and innovation.</p>
+    
+    <div class="team">
+        <div class="member">
+        
+            <h3>Ananya SM</h3>
+            <p>1EW22AI005<br>6TH semester AIML<br>EAST WEST INSTITUTE OF TECHNOLOGY</p>
+        </div>
+        <div class="member">
+        
+            <h3>Hitharth K</h3>
+            <p>1EW22AI015<br>6TH semester AIML<br>EAST WEST INSTITUTE OF TECHNOLOGY</p>
+        </div>
+    </div>
+
+    <div class="ceo-section">
+        
+        <h2>Dr. Shashi Shekhar. T.R.</h2>
+        <p>
+Professor- Department of Civil Engineering 
+Treasurer, Zero Waste Society of India (ZWSI-ECSI)- IISc Campus 
+IQAC Coordinator-EWIT                                        
+East West Institute of Technology  
+Sy. No. 63, Anjana Nagar, 
+Off Magadi Road, 
+Bangalore – 560 091 
+Karnataka – India. 
+EDUCATION 
+Ph.D., (Doctor of Philosophy in Environmental Science, Kuvempu 
+University) on the topic “Studies on Paper and Pulp Industrial 
+Effluent”. Awarded on 11.12.2006. 
+M.Sc. in Environmental Science from Bangalore University, 
+Bangalore (2000).
+        </p>
+    </div>
+    <a href="/"><button>Back to Home</button></a>
+</body>
+</html>
